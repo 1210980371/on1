@@ -1,10 +1,133 @@
-// 混淆前的逻辑参考
-function checkIdentity() {
-    let roll = Math.floor(Math.random() * 20) + 1;
-    if (roll > 15) {
-        console.log("你通过了洞察检定，发现了隐藏的入口...");
-        // 这里执行真正的代码
-    } else {
-        console.log("你只看到了一张普通的旧纸。");
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>翡翠联盟 | 荒野平衡维护系统</title>
+    <style>
+        :root {
+            --nature-green: #2d5a27;
+            --earth-brown: #3e2723;
+            --leaf-gold: #c5e1a5;
+        }
+        body {
+            background-color: #121212;
+            color: #e8f5e9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            background: linear-gradient(135deg, #1b3022 0%, #0c1a10 100%);
+            border: 2px solid var(--nature-green);
+            padding: 40px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,255,100,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 1px solid var(--leaf-gold);
+            margin-bottom: 30px;
+        }
+        h1 { color: var(--leaf-gold); letter-spacing: 3px; }
+        .mission-card {
+            background: rgba(255,255,255,0.05);
+            margin: 15px 0;
+            padding: 20px;
+            border-left: 5px solid var(--nature-green);
+            transition: 0.3s;
+        }
+        .mission-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(10px);
+        }
+        .progress-bar {
+            height: 10px;
+            background: #333;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .fill {
+            height: 100%;
+            background: var(--nature-green);
+            border-radius: 5px;
+            box-shadow: 0 0 10px #4caf50;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .stat-item { text-align: center; color: var(--leaf-gold); }
+        .btn-action {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid var(--leaf-gold);
+            color: var(--leaf-gold);
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-action:hover {
+            background: var(--leaf-gold);
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🌿 翡翠联盟：全球平衡监测</h1>
+        <p>“只要有最后一处荒野，平衡便不曾打破。”</p>
+    </div>
+
+    <div class="mission-card">
+        <h3>任务：净化幽暗地域水源</h3>
+        <p>监测到泰瑟尔森林附近的地下水受到炼金废弃物污染，请德鲁伊教团成员前往清理。</p>
+        <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+        <small>当前修复进度：75%</small>
+    </div>
+
+    <div class="mission-card">
+        <h3>任务：重植至高森林</h3>
+        <p>对抗非法伐木者的入侵，并施展《植物滋长》法术恢复生态多样性。</p>
+        <div class="progress-bar"><div class="fill" style="width: 40%"></div></div>
+        <small>当前修复进度：40%</small>
+    </div>
+
+    <div class="stats">
+        <div class="stat-item"><h4>恢复森林</h4><p>1,240 亩</p></div>
+        <div class="stat-item"><h4>保护物种</h4><p>84 种</p></div>
+        <div class="stat-item"><h4>德鲁伊活跃</h4><p>256 位</p></div>
+    </div>
+
+    <a href="#" class="btn-action" onclick="activateSeal()">开启自然检定</a>
+
+    <div style="text-align: center; color: #444; font-size: 12px; margin-top: 50px;">
+        © 2026 翡翠联盟 · 维护费伦大陆自然资源部
+    </div>
+</div>
+
+<script>
+    // 在这里嵌入混淆后的代码
+    function activateSeal() {
+        console.log("正在调动自然之力...");
+        // 触发你的隐藏逻辑
+        _natureProtection();
     }
-}
+
+    function _natureProtection() {
+        // 将你从 obfuscator.io 混淆后的内容放在这里
+        alert("检定通过：你感受到大地的脉动。");
+    }
+</script>
+
+</body>
+</html>
